@@ -29,13 +29,13 @@ export function InputText({ ...rest }: InputTextProps) {
         {...rest}
         onFocus={toggleActive}
         onBlur={toggleActive}
-        secureTextEntry={showInputContent}
+        secureTextEntry={!showInputContent}
       />
 
       {!!rest.secureTextEntry && (
         <S.IconButton onPress={toggleSecureIcon}>
           <Feather
-            name={!showInputContent ? 'eye-off' : 'eye'}
+            name={showInputContent ? 'eye-off' : 'eye'}
             size={24}
             color={theme.colors.gray_2}
           />
