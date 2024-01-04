@@ -3,6 +3,14 @@ import { Button, InputText, Text } from '@components/index';
 import * as S from './styles';
 
 export function SignIn() {
+  function handleSign() {
+    console.log('>>> handleSign');
+  }
+
+  function handleNewAccount() {
+    console.log('>>> handleNewAccount');
+  }
+
   return (
     <S.Container>
       <S.Wrapper>
@@ -27,14 +35,22 @@ export function SignIn() {
           <InputText placeholder="Senha" secureTextEntry />
 
           <S.ButtonWrapper>
-            <Button bgColor="blue_light">
+            <Button bgColor="blue_light" onPress={handleSign}>
               <Text>Entrar</Text>
             </Button>
           </S.ButtonWrapper>
         </S.FormWrapper>
       </S.Wrapper>
 
-      <S.FooterWrapper></S.FooterWrapper>
+      <S.FooterWrapper>
+        <Text color="gray_2">Ainda não tem acesso?</Text>
+
+        <S.ButtonWrapper>
+          <Button bgColor="gray_5" onPress={handleNewAccount}>
+            <Text color="gray_2">Criar uma conta</Text>
+          </Button>
+        </S.ButtonWrapper>
+      </S.FooterWrapper>
     </S.Container>
   );
 }

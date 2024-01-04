@@ -32,9 +32,12 @@ export const FormWrapper = styled.View`
 
 export const ButtonWrapper = styled.View`
   margin-top: 16px;
+  width: 100%;
 `;
 
 export const FooterWrapper = styled.View`
   padding-top: 56px;
   align-items: center;
+  padding-left: 48px;
+  padding-right: 48px;
 `;
