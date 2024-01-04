@@ -4,7 +4,7 @@
 
 ## Figma
 
-[Rentx-Ignite](https://www.figma.com/file/L7b7RrOb4mf4icH7ThqH6V/Marketspace?type=design&node-id=2-12&mode=design&t=w91RTvDzrxoPsGGl-0)
+[Marketspace Ignite](https://www.figma.com/file/L7b7RrOb4mf4icH7ThqH6V/Marketspace?type=design&node-id=2-12&mode=design&t=w91RTvDzrxoPsGGl-0)
 
 <br />
 
