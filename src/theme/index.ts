@@ -1,7 +1,12 @@
-export default {
+enum FontFamilies {
+  'karlaRegular' = 'karlaRegular',
+  'karlaBold' = 'karlaBold'
+}
+
+const theme = {
   fonts: {
     family: {
-      dmSans: {
+      karla: {
         regular: 'Karla_400Regular',
         bold: 'Karla_700Bold'
       }
@@ -11,9 +16,13 @@ export default {
       14: '14px',
       16: '16px',
       20: '20px',
-      24: '24px'
+      24: '24px',
+      26: '26px',
+      28: '28px',
+      30: '30px',
+      32: '32px'
     },
-    lineHeight: (fontSize: number) => `${fontSize * 1.3}px`
+    lineHeight: (fontSize: number) => `${(fontSize * 1.3).toFixed(2)}px`
   },
   colors: {
     gray_1: '#1A181B',
@@ -27,3 +36,10 @@ export default {
     blue_light: '#647AC7'
   }
 } as const;
+
+const mapFontFamilies = {
+  [FontFamilies.karlaRegular]: theme.fonts.family.karla.regular,
+  [FontFamilies.karlaBold]: theme.fonts.family.karla.bold
+};
+
+export { FontFamilies, mapFontFamilies, theme };

@@ -9,8 +9,8 @@ import { useCallback } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
 
-import { Home } from '@screens/Home';
-import theme from '@theme/index';
+import { SignIn } from '@screens/SignIn';
+import { theme } from '@theme/index';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -31,8 +31,8 @@ export default function App() {
   return (
     <GestureHandlerRootView onLayout={onLayoutRootView} style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <StatusBar style="light" translucent />
-        <Home />
+        <StatusBar style="dark" translucent />
+        <SignIn />
       </ThemeProvider>
     </GestureHandlerRootView>
   );
