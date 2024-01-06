@@ -26,6 +26,7 @@ export function InputText({ ...rest }: InputTextProps) {
       <S.Input
         autoCorrect={false}
         autoCapitalize="none"
+        autoComplete="off"
         {...rest}
         onFocus={toggleActive}
         onBlur={toggleActive}

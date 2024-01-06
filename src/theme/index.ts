@@ -33,7 +33,8 @@ const theme = {
     gray_6: '#EDECEE',
     gray_7: '#F7F7F8',
     blue: '#364D9D',
-    blue_light: '#647AC7'
+    blue_light: '#647AC7',
+    white: '#FFFFFF'
   }
 } as const;
 

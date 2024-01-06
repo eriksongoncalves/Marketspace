@@ -7,12 +7,12 @@ export function SignIn() {
     console.log('>>> handleSign');
   }
 
-  function handleNewAccount() {
-    console.log('>>> handleNewAccount');
+  function navigateToRegister() {
+    console.log('>>> navigateToRegister');
   }
 
   return (
-    <S.Container>
+    <S.Container bounces={false}>
       <S.Wrapper>
         <S.LogoWrapper>
           <LogoIcon />
@@ -46,7 +46,7 @@ export function SignIn() {
         <Text color="gray_2">Ainda não tem acesso?</Text>
 
         <S.ButtonWrapper>
-          <Button bgColor="gray_5" onPress={handleNewAccount}>
+          <Button bgColor="gray_5" onPress={navigateToRegister}>
             <Text color="gray_2">Criar uma conta</Text>
           </Button>
         </S.ButtonWrapper>

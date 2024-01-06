@@ -9,7 +9,7 @@ import { useCallback } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
 
-import { SignIn } from '@screens/SignIn';
+import { Register } from '@screens/Register';
 import { theme } from '@theme/index';
 
 export default function App() {
@@ -32,7 +32,7 @@ export default function App() {
     <GestureHandlerRootView onLayout={onLayoutRootView} style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
         <StatusBar style="dark" translucent />
-        <SignIn />
+        <Register />
       </ThemeProvider>
     </GestureHandlerRootView>
   );
