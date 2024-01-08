@@ -27,7 +27,6 @@ export const WellcomeWrapper = styled.View`
 `;
 
 export const WellcomeTexts = styled.View`
-  gap: 8px;
   min-width: 125px;
 `;
 
