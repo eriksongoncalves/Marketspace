@@ -1,14 +1,8 @@
-import { Feather } from '@expo/vector-icons';
-import { useTheme } from 'styled-components/native';
-
 import LogoIcon from '@assets/logo-icon.svg';
-import { Button, InputText, Text } from '@components/index';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { Avatar, Button, InputText, Text } from '@components/index';
 import * as S from './styles';
 
 export function Register() {
-  const theme = useTheme();
-
   function handleRegister() {
     console.log('>>> handleSign');
   }
@@ -36,15 +30,7 @@ export function Register() {
       </S.LogoWrapper>
 
       <S.FormWrapper>
-        <TouchableWithoutFeedback onPress={handleChangePhoto}>
-          <S.AvatarWrapper>
-            <Feather name="user" size={30} color={theme.colors.gray_4} />
-
-            <S.EditWrapper>
-              <Feather name="edit-3" size={16} color={theme.colors.white} />
-            </S.EditWrapper>
-          </S.AvatarWrapper>
-        </TouchableWithoutFeedback>
+        <Avatar size="large" onEditPress={handleChangePhoto} />
 
         <InputText placeholder="Nome" />
 

@@ -22,33 +22,6 @@ export const FormWrapper = styled.View`
   align-items: center;
 `;
 
-export const AvatarWrapper = styled.View`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.gray_5};
-    width: 88px;
-    height: 88px;
-    border-width: 3px;
-    border-color: ${theme.colors.blue_light};
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-  `}
-`;
-
-export const EditWrapper = styled.View`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.blue_light};
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: -5px;
-    bottom: 0;
-  `}
-`;
-
 export const ButtonWrapper = styled.View`
   margin-top: 16px;
   width: 100%;
