@@ -1,7 +1,8 @@
 import { AntDesign, Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components/native';
 
-import { Avatar, Button, Text } from '@components/index';
+import { Avatar, Button, InputText, Text } from '@components/index';
+import { TouchableOpacity } from 'react-native';
 import * as S from './styles';
 
 export function Home() {
@@ -58,6 +59,32 @@ export function Home() {
             <AntDesign name="arrowright" size={24} color={theme.colors.blue} />
           </S.TextButton>
         </S.MyProductsInfoBox>
+
+        <S.FilterInputWrapper>
+          <Text color="gray_3">Compre produtos variados</Text>
+
+          <S.InputWrapper>
+            <S.Input>
+              <InputText
+                placeholder="Buscar anúncio"
+                noBorders
+                onSubmitEditing={() => {}}
+              />
+            </S.Input>
+
+            <S.IconsWrapper>
+              <TouchableOpacity onPress={() => {}}>
+                <Feather name="search" size={24} color="black" />
+              </TouchableOpacity>
+
+              <S.VerticalDivider />
+
+              <TouchableOpacity onPress={() => {}}>
+                <Feather name="sliders" size={24} color="black" />
+              </TouchableOpacity>
+            </S.IconsWrapper>
+          </S.InputWrapper>
+        </S.FilterInputWrapper>
       </S.MyProductsInfo>
     </S.Container>
   );

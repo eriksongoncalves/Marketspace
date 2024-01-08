@@ -60,3 +60,36 @@ export const TextButton = styled.TouchableOpacity`
   margin-right: 20px;
   gap: 10px;
 `;
+
+export const FilterInputWrapper = styled.View`
+  margin-top: 32px;
+`;
+
+export const InputWrapper = styled.View`
+  ${({ theme }) => css`
+    margin-top: 12px;
+    background-color: ${theme.colors.gray_7};
+    border-radius: 6px;
+    padding-right: 16px;
+
+    flex-direction: row;
+    align-items: center;
+  `}
+`;
+
+export const Input = styled.View`
+  flex: 1;
+`;
+
+export const IconsWrapper = styled.View`
+  flex-direction: row;
+  gap: 12px;
+`;
+
+export const VerticalDivider = styled.View`
+  ${({ theme }) => css`
+    width: 1px;
+    background-color: ${theme.colors.gray_4};
+    opacity: 0.5;
+  `}
+`;

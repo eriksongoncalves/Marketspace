@@ -5,16 +5,20 @@ import { useTheme } from 'styled-components/native';
 
 import * as S from './styles';
 
-type InputTextProps = TextInputProps;
+type InputTextProps = TextInputProps & {
+  noBorders?: boolean;
+};
 
-export function InputText({ ...rest }: InputTextProps) {
+export function InputText({ noBorders = false, ...rest }: InputTextProps) {
   const [isActive, setActive] = useState(false);
   const [showInputContent, setShowInputContent] = useState(false);
 
   const theme = useTheme();
 
   function toggleActive() {
-    setActive(prevState => !prevState);
+    if (!noBorders) {
+      setActive(prevState => !prevState);
+    }
   }
 
   function toggleSecureIcon() {
