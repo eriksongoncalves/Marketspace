@@ -19,7 +19,7 @@ export function Avatar({ size = 'medium', uri, onEditPress }: AvatarProps) {
     <TouchableWithoutFeedback onPress={onEditPress}>
       <S.Container size={size}>
         {uri ? (
-          <S.Image source={{ uri }} resizeMode="cover" />
+          <S.Image size={size} source={{ uri }} resizeMode="cover" />
         ) : (
           <Feather
             name="user"
