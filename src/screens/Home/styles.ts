@@ -34,3 +34,29 @@ export const WellcomeTexts = styled.View`
 export const ButtonWrapper = styled.View`
   flex: 1;
 `;
+
+export const MyProductsInfo = styled.View`
+  margin-top: 32px;
+`;
+
+export const MyProductsInfoBox = styled.View`
+  margin-top: 12px;
+  background: rgba(100, 122, 199, 0.1);
+  border-radius: 6px;
+  padding: 16px 12px;
+
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const ActivityProductsInfo = styled.View`
+  margin-left: 16px;
+  flex: 1;
+`;
+
+export const TextButton = styled.TouchableOpacity`
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+  gap: 10px;
+`;

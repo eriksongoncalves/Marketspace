@@ -1,8 +1,7 @@
-import { Feather } from '@expo/vector-icons';
+import { AntDesign, Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components/native';
 
 import { Avatar, Button, Text } from '@components/index';
-
 import * as S from './styles';
 
 export function Home() {
@@ -36,6 +35,30 @@ export function Home() {
           </Button>
         </S.ButtonWrapper>
       </S.Header>
+
+      <S.MyProductsInfo>
+        <Text color="gray_3">Seus produtos anunciados para venda</Text>
+
+        <S.MyProductsInfoBox>
+          <MaterialCommunityIcons name="tag-outline" size={24} color="black" />
+
+          <S.ActivityProductsInfo>
+            <Text color="gray_2" size={20} fontFamily="karlaBold">
+              4
+            </Text>
+            <Text color="gray_2" size={12}>
+              anúncios ativos
+            </Text>
+          </S.ActivityProductsInfo>
+
+          <S.TextButton onPress={() => {}}>
+            <Text color="blue" size={12} fontFamily="karlaBold">
+              Meus anúncios
+            </Text>
+            <AntDesign name="arrowright" size={24} color={theme.colors.blue} />
+          </S.TextButton>
+        </S.MyProductsInfoBox>
+      </S.MyProductsInfo>
     </S.Container>
   );
 }
