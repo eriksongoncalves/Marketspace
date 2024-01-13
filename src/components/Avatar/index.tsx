@@ -2,22 +2,29 @@ import { Feather } from '@expo/vector-icons';
 import { TouchableWithoutFeedback } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
+import { ThemeColors } from '@src/shared/types/theme';
 import * as S from './styles';
 
 export type AvatarSizes = 'large' | 'medium' | 'small';
 
 type AvatarProps = {
   size?: AvatarSizes;
+  borderColor?: ThemeColors;
   uri?: string;
   onEditPress?: () => void;
 };
 
-export function Avatar({ size = 'medium', uri, onEditPress }: AvatarProps) {
+export function Avatar({
+  size = 'medium',
+  borderColor = 'blue_light',
+  uri,
+  onEditPress
+}: AvatarProps) {
   const theme = useTheme();
 
   return (
     <TouchableWithoutFeedback onPress={onEditPress}>
-      <S.Container size={size}>
+      <S.Container size={size} borderColor={borderColor}>
         {uri ? (
           <S.Image size={size} source={{ uri }} resizeMode="cover" />
         ) : (

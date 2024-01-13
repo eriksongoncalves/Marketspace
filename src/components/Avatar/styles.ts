@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components/native';
+
+import { ThemeColors } from '@src/shared/types/theme';
 import { AvatarSizes } from './';
 
 type ContainerProps = {
   size: AvatarSizes;
+  borderColor: ThemeColors;
 };
 
 type ImageProps = {
@@ -25,7 +28,7 @@ const containerModifiers = {
   small: () => css`
     width: 24px;
     height: 24px;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 12px;
   `
 };
@@ -34,27 +37,24 @@ const imageModifiers = {
   large: () => css`
     width: 83px;
     height: 83px;
-    border-width: 3px;
     border-radius: 43px;
   `,
   medium: () => css`
     width: 42px;
     height: 42px;
-    border-width: 2px;
     border-radius: 21px;
   `,
   small: () => css`
-    width: 20px;
-    height: 20px;
-    border-width: 2px;
+    width: 22px;
+    height: 22px;
     border-radius: 10px;
   `
 };
 
 export const Container = styled.View<ContainerProps>`
-  ${({ theme, size }) => css`
+  ${({ theme, size, borderColor }) => css`
     background-color: ${theme.colors.gray_5};
-    border-color: ${theme.colors.blue_light};
+    border-color: ${theme.colors[borderColor]};
     justify-content: center;
     align-items: center;
 

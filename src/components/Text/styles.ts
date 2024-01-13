@@ -12,6 +12,7 @@ type WrapperProps = {
   fontFamily: ThemeFontFamilies;
   color: ThemeColors;
   align: 'center' | 'left' | 'right';
+  trasnform?: 'none' | 'uppercase' | 'lowercase';
 };
 
 const modifiers = {
@@ -21,11 +22,12 @@ const modifiers = {
 };
 
 export const Wrapper = styled.Text<WrapperProps>`
-  ${({ theme, size, fontFamily, color, align }) => css`
+  ${({ theme, size, fontFamily, color, align, trasnform }) => css`
     font-size: ${theme.fonts.size[size]};
     font-family: ${modifiers.fontFamily(fontFamily)};
     color: ${theme.colors[color]};
     line-height: ${modifiers.lineHeight(size, theme)};
     text-align: ${align};
+    text-transform: ${trasnform};
   `}
 `;

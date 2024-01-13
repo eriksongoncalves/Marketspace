@@ -1,3 +1,5 @@
+import { SafeAreaView } from 'react-native';
+
 import LogoIcon from '@assets/logo-icon.svg';
 import { Avatar, Button, InputText, Text } from '@components/index';
 import * as S from './styles';
@@ -17,47 +19,49 @@ export function Register() {
 
   return (
     <S.Container bounces={false}>
-      <S.LogoWrapper>
-        <LogoIcon width={60} height={40} />
+      <SafeAreaView>
+        <S.LogoWrapper>
+          <LogoIcon width={60} height={40} />
 
-        <Text size={20} fontFamily="karlaBold" color="gray_1" align="center">
-          Boas vindas!
-        </Text>
-        <Text color="gray_2" align="center">
-          Crie sua conta e use o espaço para comprar itens variados e vender
-          seus produtos
-        </Text>
-      </S.LogoWrapper>
+          <Text size={20} fontFamily="karlaBold" color="gray_1" align="center">
+            Boas vindas!
+          </Text>
+          <Text color="gray_2" align="center">
+            Crie sua conta e use o espaço para comprar itens variados e vender
+            seus produtos
+          </Text>
+        </S.LogoWrapper>
 
-      <S.FormWrapper>
-        <Avatar size="large" onEditPress={handleChangePhoto} />
+        <S.FormWrapper>
+          <Avatar size="large" onEditPress={handleChangePhoto} />
 
-        <InputText placeholder="Nome" />
+          <InputText placeholder="Nome" />
 
-        <InputText placeholder="E-mail" keyboardType="email-address" />
+          <InputText placeholder="E-mail" keyboardType="email-address" />
 
-        <InputText placeholder="Telefone" keyboardType="number-pad" />
+          <InputText placeholder="Telefone" keyboardType="number-pad" />
 
-        <InputText placeholder="Senha" secureTextEntry />
+          <InputText placeholder="Senha" secureTextEntry />
 
-        <InputText placeholder="Confirmar senha" secureTextEntry />
+          <InputText placeholder="Confirmar senha" secureTextEntry />
 
-        <S.ButtonWrapper>
-          <Button bgColor="gray_1" onPress={handleRegister}>
-            <Text>Criar</Text>
-          </Button>
-        </S.ButtonWrapper>
-      </S.FormWrapper>
+          <S.ButtonWrapper>
+            <Button bgColor="gray_1" onPress={handleRegister}>
+              <Text>Criar</Text>
+            </Button>
+          </S.ButtonWrapper>
+        </S.FormWrapper>
 
-      <S.FooterWrapper>
-        <Text color="gray_2">Já tenho uma conta</Text>
+        <S.FooterWrapper>
+          <Text color="gray_2">Já tenho uma conta</Text>
 
-        <S.ButtonWrapper>
-          <Button bgColor="gray_5" onPress={navigateToLogin}>
-            <Text color="gray_2">Ir para o login</Text>
-          </Button>
-        </S.ButtonWrapper>
-      </S.FooterWrapper>
+          <S.ButtonWrapper>
+            <Button bgColor="gray_5" onPress={navigateToLogin}>
+              <Text color="gray_2">Ir para o login</Text>
+            </Button>
+          </S.ButtonWrapper>
+        </S.FooterWrapper>
+      </SafeAreaView>
     </S.Container>
   );
 }

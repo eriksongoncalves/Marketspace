@@ -1,15 +1,17 @@
-import { StatusBar } from 'react-native';
+import { Dimensions, StatusBar } from 'react-native';
 import styled, { css } from 'styled-components/native';
 
 export const Container = styled.ScrollView`
   ${({ theme }) => css`
-    flex: 1;
-    margin-top: ${StatusBar.currentHeight}px;
     background-color: ${theme.colors.gray_6};
+    padding-top: ${StatusBar.currentHeight}px;
     padding-left: 24px;
     padding-right: 24px;
-    padding-top: 20px;
   `}
+`;
+
+export const SafeAreaView = styled.SafeAreaView`
+  min-height: ${Dimensions.get('window').height}px;
 `;
 
 export const Header = styled.View`
@@ -17,6 +19,7 @@ export const Header = styled.View`
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  margin-top: 20px;
 `;
 
 export const WellcomeWrapper = styled.View`
@@ -91,4 +94,8 @@ export const VerticalDivider = styled.View`
     background-color: ${theme.colors.gray_4};
     opacity: 0.5;
   `}
+`;
+
+export const AdsWrapper = styled.View`
+  margin-top: 24px;
 `;

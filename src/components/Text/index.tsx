@@ -12,6 +12,7 @@ type TextProps = {
   fontFamily?: ThemeFontFamilies;
   color?: ThemeColors;
   align?: 'center' | 'left' | 'right';
+  trasnform?: 'none' | 'uppercase' | 'lowercase';
 } & TextPropsBase;
 
 export function Text({
@@ -19,6 +20,7 @@ export function Text({
   fontFamily = 'karlaRegular',
   color = 'gray_6',
   align = 'left',
+  trasnform = 'none',
   children,
   ...rest
 }: TextProps) {
@@ -28,6 +30,7 @@ export function Text({
       fontFamily={fontFamily}
       color={color}
       align={align}
+      trasnform={trasnform}
       {...rest}
     >
       {children}

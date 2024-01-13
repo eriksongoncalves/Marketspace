@@ -15,7 +15,8 @@ module.exports = function (api) {
             '@theme': './src/theme',
             '@shared': './src/shared',
             '@hooks': './src/hooks',
-            '@routes': './src/@routes'
+            '@routes': './src/@routes',
+            '@mocks': './src/mocks'
           }
         }
       ]

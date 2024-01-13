@@ -5,7 +5,9 @@ import {
 } from '@expo-google-fonts/karla';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
+import 'intl';
 import { useCallback } from 'react';
+
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
 
@@ -31,7 +33,7 @@ export default function App() {
   return (
     <GestureHandlerRootView onLayout={onLayoutRootView} style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <StatusBar style="dark" translucent />
+        <StatusBar translucent backgroundColor="transparent" />
         <Home />
       </ThemeProvider>
     </GestureHandlerRootView>
