@@ -10,8 +10,8 @@ type ContainerProps = {
 
 const containerModifiers = {
   large: () => css`
-    padding: 6px 6px 6px 16px;
-    max-width: 76px;
+    padding: 6px 12px;
+    /* max-width: 100px; */
   `,
   medium: () => css`
     padding: 8px 2px;
@@ -31,7 +31,6 @@ export const Container = styled.View<ContainerProps>`
     background-color: ${theme.colors[bgColor]};
     border-radius: 20px;
     gap: 6px;
-    width: 100%;
 
     ${containerModifiers[size]()}
   `}

@@ -12,6 +12,7 @@ export const Wrapper = styled.TouchableOpacity<WrapperProps>`
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex: 1;
     background-color: ${theme.colors[bgColor]};
     border-radius: 6px;
     gap: 8px;

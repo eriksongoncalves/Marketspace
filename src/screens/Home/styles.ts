@@ -99,3 +99,45 @@ export const VerticalDivider = styled.View`
 export const AdsWrapper = styled.View`
   margin-top: 24px;
 `;
+
+export const BottomSheetContent = styled.View`
+  padding: 24px;
+  flex: 1;
+`;
+
+export const BottomSheetHeader = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+`;
+
+export const ConditionWrapper = styled.View`
+  gap: 12px;
+  margin-bottom: 24px;
+`;
+
+export const TagsContainer = styled.View`
+  flex-direction: row;
+  gap: 8px;
+`;
+
+export const AcceptExchange = styled.View`
+  gap: 12px;
+  margin-bottom: 24px;
+`;
+
+export const PaymentMethosWrapper = styled.View`
+  gap: 12px;
+  margin-bottom: 64px;
+  flex: 1;
+`;
+
+export const BottomSheetFooter = styled.View`
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 60px;
+`;
