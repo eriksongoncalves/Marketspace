@@ -1,4 +1,6 @@
-import { Avatar, Tag, Text } from '@components/index';
+import { Avatar } from '@components/Avatar';
+import { Tag } from '@components/Tag';
+import { Text } from '@components/Text';
 import { Ad } from '@shared/types/ads';
 import { formatPrice } from '@shared/utils/format-price';
 import * as S from './styles';

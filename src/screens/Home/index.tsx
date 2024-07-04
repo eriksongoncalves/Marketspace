@@ -252,7 +252,7 @@ export function Home() {
 
                   <Switch
                     trackColor={{
-                      false: theme.colors.gray_7,
+                      false: theme.colors.gray_5,
                       true: theme.colors.blue_light
                     }}
                     thumbColor={

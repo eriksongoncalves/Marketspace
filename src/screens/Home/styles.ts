@@ -123,8 +123,8 @@ export const TagsContainer = styled.View`
 `;
 
 export const AcceptExchange = styled.View`
-  gap: 12px;
   margin-bottom: 24px;
+  align-items: flex-start;
 `;
 
 export const PaymentMethosWrapper = styled.View`
