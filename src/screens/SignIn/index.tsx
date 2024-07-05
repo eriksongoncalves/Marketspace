@@ -1,17 +1,17 @@
-import LogoIcon from '@assets/logo-icon.svg';
-import { Button, InputText, Text } from '@components/index';
-import { useNavigation } from '@react-navigation/native';
-import * as S from './styles';
+import LogoIcon from "@assets/logo-icon.svg";
+import { Button, InputText, Text } from "@components/index";
+import { useNavigation } from "@react-navigation/native";
+import * as S from "./styles";
 
 export function SignIn() {
   const navigation = useNavigation();
 
   function handleSign() {
-    navigation.navigate('app');
+    navigation.navigate("app");
   }
 
   function navigateToRegister() {
-    navigation.navigate('register');
+    navigation.navigate("register");
   }
 
   return (

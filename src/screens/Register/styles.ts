@@ -1,5 +1,5 @@
-import { StatusBar } from 'react-native';
-import styled, { css } from 'styled-components/native';
+import { StatusBar } from "react-native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.ScrollView`
   ${({ theme }) => css`

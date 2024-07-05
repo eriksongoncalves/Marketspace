@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components/native';
+import styled, { css } from "styled-components/native";
 
-import { ThemeColors } from '@src/shared/types/theme';
-import { AvatarSizes } from './';
+import { ThemeColors } from "@src/shared/types/theme";
+import { AvatarSizes } from "./";
 
 type ContainerProps = {
   size: AvatarSizes;

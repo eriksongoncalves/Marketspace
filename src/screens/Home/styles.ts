@@ -1,5 +1,5 @@
-import { Dimensions, StatusBar } from 'react-native';
-import styled, { css } from 'styled-components/native';
+import { Dimensions, StatusBar } from "react-native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.ScrollView`
   ${({ theme }) => css`
@@ -11,7 +11,7 @@ export const Container = styled.ScrollView`
 `;
 
 export const SafeAreaView = styled.SafeAreaView`
-  min-height: ${Dimensions.get('window').height}px;
+  min-height: ${Dimensions.get("window").height}px;
 `;
 
 export const Header = styled.View`

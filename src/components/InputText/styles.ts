@@ -1,4 +1,4 @@
-import styled, { DefaultTheme, css } from 'styled-components/native';
+import styled, { DefaultTheme, css } from "styled-components/native";
 
 const modifiers = {
   isActive: (theme: DefaultTheme) => css`

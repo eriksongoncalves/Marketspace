@@ -1,7 +1,7 @@
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from "react-native";
 
-import { Text } from '@components/index';
-import * as S from './styles';
+import { Text } from "@components/index";
+import * as S from "./styles";
 
 export function Detail() {
   return (

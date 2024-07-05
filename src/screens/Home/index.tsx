@@ -1,23 +1,23 @@
-import { AntDesign, Feather, MaterialCommunityIcons } from '@expo/vector-icons';
+import { AntDesign, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import {
-	BottomSheetModal,
-	BottomSheetModalProvider,
-	BottomSheetScrollView
-} from '@gorhom/bottom-sheet';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { FlatList, LogBox, Switch, TouchableOpacity } from 'react-native';
-import { useTheme } from 'styled-components/native';
+  BottomSheetModal,
+  BottomSheetModalProvider,
+  BottomSheetScrollView
+} from "@gorhom/bottom-sheet";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { FlatList, LogBox, Switch, TouchableOpacity } from "react-native";
+import { useTheme } from "styled-components/native";
 
-import { AdsItem, Avatar, Button, Checkbox, InputText, Tag, Text } from '@components/index';
-import { useNavigation } from '@react-navigation/native';
-import { adsMock } from '../../mocks/ads';
-import * as S from './styles';
+import { AdsItem, Avatar, Button, Checkbox, InputText, Tag, Text } from "@components/index";
+import { useNavigation } from "@react-navigation/native";
+import { adsMock } from "../../mocks/ads";
+import * as S from "./styles";
 
-const PAYMENT_METHODS = ['Boleto', 'Pix', 'Dinheiro', 'Cartão de crédito', 'Depósito bancário'];
+const PAYMENT_METHODS = ["Boleto", "Pix", "Dinheiro", "Cartão de crédito", "Depósito bancário"];
 
 enum Condition {
-  NEW = 'NEW',
-  USED = 'USED'
+  NEW = "NEW",
+  USED = "USED"
 }
 
 export function Home() {
@@ -30,14 +30,14 @@ export function Home() {
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
-  const snapPoints = useMemo(() => ['70%'], []);
+  const snapPoints = useMemo(() => ["70%"], []);
 
   const handlePresentModalPress = useCallback(() => {
     bottomSheetModalRef.current?.present();
   }, []);
 
   const handleSheetChanges = useCallback((index: number) => {
-    console.log('handleSheetChanges', index);
+    console.log("handleSheetChanges", index);
   }, []);
 
   const toggleSwitch = useCallback(() => setIsEnabled(previousState => !previousState), []);
@@ -63,11 +63,11 @@ export function Home() {
 
     return (
       <Tag
-        bgColor={isSelected ? 'blue_light' : 'gray_5'}
+        bgColor={isSelected ? "blue_light" : "gray_5"}
         size="large"
         onPress={() => changeCondition(tagType)}
       >
-        <Text color={isSelected ? 'white' : 'gray_3'} fontFamily="karlaBold">
+        <Text color={isSelected ? "white" : "gray_3"} fontFamily="karlaBold">
           {tagLabel}
         </Text>
 
@@ -79,7 +79,7 @@ export function Home() {
   };
 
   useEffect(() => {
-    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+    LogBox.ignoreLogs(["VirtualizedLists should never be nested"]);
   }, []);
 
   return (
@@ -101,7 +101,7 @@ export function Home() {
             </S.WellcomeWrapper>
 
             <S.ButtonWrapper>
-              <Button onPress={() => navigation.navigate('detail')} bgColor="gray_1">
+              <Button onPress={() => navigation.navigate("detail")} bgColor="gray_1">
                 <Feather name="plus" size={24} color={theme.colors.white} />
                 <Text size={16} color="white" fontFamily="karlaBold">
                   Criar anúncio
@@ -162,7 +162,7 @@ export function Home() {
               keyExtractor={item => String(item.id)}
               numColumns={2}
               renderItem={({ item }) => <AdsItem data={item} onPress={() => {}} />}
-              columnWrapperStyle={{ justifyContent: 'space-between' }}
+              columnWrapperStyle={{ justifyContent: "space-between" }}
               bounces={false}
             />
           </S.AdsWrapper>
@@ -173,9 +173,9 @@ export function Home() {
             onChange={handleSheetChanges}
             style={{
               borderRadius: 28,
-              overflow: 'hidden'
+              overflow: "hidden"
             }}
-            containerStyle={{ backgroundColor: 'rgba(0,0,0,.7)' }}
+            containerStyle={{ backgroundColor: "rgba(0,0,0,.7)" }}
             backgroundStyle={{ backgroundColor: theme.colors.gray_6 }}
           >
             <BottomSheetScrollView
@@ -201,8 +201,8 @@ export function Home() {
                   </Text>
 
                   <S.TagsContainer>
-                    {makeTag(Condition.NEW, 'NOVO')}
-                    {makeTag(Condition.USED, 'USADO')}
+                    {makeTag(Condition.NEW, "NOVO")}
+                    {makeTag(Condition.USED, "USADO")}
                   </S.TagsContainer>
                 </S.ConditionWrapper>
 

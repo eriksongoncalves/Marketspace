@@ -32,8 +32,15 @@
 		"prettier/prettier": [
       "error",
       {
-        "printWidth": 100,
-        "singleQuote": true
+        "tabWidth": 2,
+				"useTabs": false,
+				"trailingComma": "none",
+				"arrowParens": "avoid",
+				"semi": true,
+				"bracketSpacing": true,
+				"singleQuote": false,
+				"endOfLine": "auto",
+				"printWidth": 100
       }
     ],
     "react-hooks/rules-of-hooks": "error",

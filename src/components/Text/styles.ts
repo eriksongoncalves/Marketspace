@@ -1,24 +1,19 @@
-import styled, { DefaultTheme, css } from 'styled-components/native';
+import styled, { DefaultTheme, css } from "styled-components/native";
 
-import {
-  ThemeColors,
-  ThemeFontFamilies,
-  ThemeFontSizes
-} from '@shared/types/theme';
-import { mapFontFamilies } from '@theme/index';
+import { ThemeColors, ThemeFontFamilies, ThemeFontSizes } from "@shared/types/theme";
+import { mapFontFamilies } from "@theme/index";
 
 type WrapperProps = {
   size: ThemeFontSizes;
   fontFamily: ThemeFontFamilies;
   color: ThemeColors;
-  align: 'center' | 'left' | 'right';
-  trasnform?: 'none' | 'uppercase' | 'lowercase';
+  align: "center" | "left" | "right";
+  trasnform?: "none" | "uppercase" | "lowercase";
 };
 
 const modifiers = {
   fontFamily: (fontFamily: ThemeFontFamilies) => mapFontFamilies[fontFamily],
-  lineHeight: (fontSize: ThemeFontSizes, theme: DefaultTheme) =>
-    theme.fonts.lineHeight(fontSize)
+  lineHeight: (fontSize: ThemeFontSizes, theme: DefaultTheme) => theme.fonts.lineHeight(fontSize)
 };
 
 export const Wrapper = styled.Text<WrapperProps>`

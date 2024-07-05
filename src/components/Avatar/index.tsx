@@ -1,11 +1,11 @@
-import { Feather } from '@expo/vector-icons';
-import { TouchableWithoutFeedback } from 'react-native';
-import { useTheme } from 'styled-components/native';
+import { Feather } from "@expo/vector-icons";
+import { TouchableWithoutFeedback } from "react-native";
+import { useTheme } from "styled-components/native";
 
-import { ThemeColors } from '@src/shared/types/theme';
-import * as S from './styles';
+import { ThemeColors } from "@src/shared/types/theme";
+import * as S from "./styles";
 
-export type AvatarSizes = 'large' | 'medium' | 'small';
+export type AvatarSizes = "large" | "medium" | "small";
 
 type AvatarProps = {
   size?: AvatarSizes;
@@ -15,8 +15,8 @@ type AvatarProps = {
 };
 
 export function Avatar({
-  size = 'medium',
-  borderColor = 'blue_light',
+  size = "medium",
+  borderColor = "blue_light",
   uri,
   onEditPress
 }: AvatarProps) {
@@ -28,11 +28,7 @@ export function Avatar({
         {uri ? (
           <S.Image size={size} source={{ uri }} resizeMode="cover" />
         ) : (
-          <Feather
-            name="user"
-            size={size === 'small' ? 12 : 30}
-            color={theme.colors.gray_4}
-          />
+          <Feather name="user" size={size === "small" ? 12 : 30} color={theme.colors.gray_4} />
         )}
 
         {!!onEditPress && (

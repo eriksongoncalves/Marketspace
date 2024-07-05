@@ -1,9 +1,9 @@
-import { Feather } from '@expo/vector-icons';
-import { useState } from 'react';
-import { TextInputProps } from 'react-native';
-import { useTheme } from 'styled-components/native';
+import { Feather } from "@expo/vector-icons";
+import { useState } from "react";
+import { TextInputProps } from "react-native";
+import { useTheme } from "styled-components/native";
 
-import * as S from './styles';
+import * as S from "./styles";
 
 type InputTextProps = TextInputProps & {
   noBorders?: boolean;
@@ -40,7 +40,7 @@ export function InputText({ noBorders = false, ...rest }: InputTextProps) {
       {!!rest.secureTextEntry && (
         <S.IconButton onPress={toggleSecureIcon}>
           <Feather
-            name={showInputContent ? 'eye-off' : 'eye'}
+            name={showInputContent ? "eye-off" : "eye"}
             size={24}
             color={theme.colors.gray_2}
           />

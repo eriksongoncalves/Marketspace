@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components/native';
+import styled, { css } from "styled-components/native";
 
-import { ThemeColors } from '@shared/types/theme';
+import { ThemeColors } from "@shared/types/theme";
 
 type WrapperProps = {
   bgColor: ThemeColors;

@@ -1,7 +1,7 @@
-import { NavigationContainer } from '@react-navigation/native';
-import React from 'react';
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 
-import { AuthStackRoutes } from './auth.stack.routes';
+import { AuthStackRoutes } from "./auth.stack.routes";
 
 export function Routes() {
   return (

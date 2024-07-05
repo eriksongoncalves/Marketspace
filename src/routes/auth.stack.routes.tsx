@@ -1,7 +1,7 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Register } from '@screens/Register';
-import { SignIn } from '@screens/SignIn';
-import AppTabRoutes from './app.tab.routes';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Register } from "@screens/Register";
+import { SignIn } from "@screens/SignIn";
+import AppTabRoutes from "./app.tab.routes";
 
 const Stack = createNativeStackNavigator();
 

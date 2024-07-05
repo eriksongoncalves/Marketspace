@@ -1,10 +1,10 @@
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useMemo, useState } from 'react';
-import { TouchableWithoutFeedback } from 'react-native';
-import { useTheme } from 'styled-components/native';
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useMemo, useState } from "react";
+import { TouchableWithoutFeedback } from "react-native";
+import { useTheme } from "styled-components/native";
 
-import { Text } from '../Text';
-import * as S from './styles';
+import { Text } from "../Text";
+import * as S from "./styles";
 
 type CheckboxProps = {
   label: string;
@@ -33,15 +33,9 @@ export function Checkbox({ label, isChecked = false, onPress }: CheckboxProps) {
     <TouchableWithoutFeedback onPress={onCheck}>
       <S.Wrapper>
         {checked ? (
-          <MaterialCommunityIcons
-            name="checkbox-marked"
-            {...checkPropsDefault}
-          />
+          <MaterialCommunityIcons name="checkbox-marked" {...checkPropsDefault} />
         ) : (
-          <MaterialCommunityIcons
-            name="checkbox-blank-outline"
-            {...checkPropsDefault}
-          />
+          <MaterialCommunityIcons name="checkbox-blank-outline" {...checkPropsDefault} />
         )}
 
         <Text color="gray_2" size={16}>

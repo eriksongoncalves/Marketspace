@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components/native';
+import styled, { css } from "styled-components/native";
 
-import { ThemeColors } from '@shared/types/theme';
-import { TagSizes } from '.';
+import { ThemeColors } from "@shared/types/theme";
+import { TagSizes } from ".";
 
 type ContainerProps = {
   bgColor: ThemeColors;

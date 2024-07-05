@@ -1,23 +1,23 @@
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from "react-native";
 
-import LogoIcon from '@assets/logo-icon.svg';
-import { Avatar, Button, InputText, Text } from '@components/index';
-import { useNavigation } from '@react-navigation/native';
-import * as S from './styles';
+import LogoIcon from "@assets/logo-icon.svg";
+import { Avatar, Button, InputText, Text } from "@components/index";
+import { useNavigation } from "@react-navigation/native";
+import * as S from "./styles";
 
 export function Register() {
   const navigation = useNavigation();
 
   function handleRegister() {
-    navigation.navigate('app');
+    navigation.navigate("app");
   }
 
   function navigateToLogin() {
-    navigation.navigate('signin');
+    navigation.navigate("signin");
   }
 
   function handleChangePhoto() {
-    console.log('>>> handleChangePhoto');
+    console.log(">>> handleChangePhoto");
   }
 
   return (
@@ -30,8 +30,7 @@ export function Register() {
             Boas vindas!
           </Text>
           <Text color="gray_2" align="center">
-            Crie sua conta e use o espaço para comprar itens variados e vender
-            seus produtos
+            Crie sua conta e use o espaço para comprar itens variados e vender seus produtos
           </Text>
         </S.LogoWrapper>
 
