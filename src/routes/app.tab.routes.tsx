@@ -31,7 +31,7 @@ function AppTabRoutes() {
         tabBarShowLabel: false,
         tabBarStyle: {
           paddingVertical: Platform.OS === "ios" ? 20 : 0,
-          height: 78,
+          height: 60,
           backgroundColor: theme.colors.white
         }
       }}
@@ -40,6 +40,7 @@ function AppTabRoutes() {
         name="home_tab"
         component={HomeStackRoutes}
         options={{
+          headerShown: false,
           tabBarIcon: ({ color }) => <Entypo name="home" size={24} color={color} />
         }}
       />
@@ -48,7 +49,7 @@ function AppTabRoutes() {
         name="ad_tab"
         component={FakeTabContent}
         options={{
-          tabBarIcon: ({ color }) => <FontAwesome5 name="tag" size={24} color={color} />
+          tabBarIcon: ({ color }) => <FontAwesome5 name="tag" size={20} color={color} />
         }}
       />
 

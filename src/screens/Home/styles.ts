@@ -1,10 +1,10 @@
 import { Dimensions, StatusBar } from "react-native";
 import styled, { css } from "styled-components/native";
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   ${({ theme }) => css`
     background-color: ${theme.colors.gray_6};
-    padding-top: ${StatusBar.currentHeight}px;
+    padding-top: ${StatusBar.currentHeight! + 20}px;
     padding-left: 24px;
     padding-right: 24px;
   `}
@@ -129,7 +129,7 @@ export const AcceptExchange = styled.View`
 
 export const PaymentMethosWrapper = styled.View`
   gap: 12px;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
   flex: 1;
 `;
 

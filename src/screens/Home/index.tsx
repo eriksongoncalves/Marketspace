@@ -84,7 +84,7 @@ export function Home() {
 
   return (
     <BottomSheetModalProvider>
-      <S.Container bounces={false}>
+      <S.Container>
         <S.SafeAreaView>
           <S.Header>
             <S.WellcomeWrapper>
@@ -101,7 +101,7 @@ export function Home() {
             </S.WellcomeWrapper>
 
             <S.ButtonWrapper>
-              <Button onPress={() => navigation.navigate("detail")} bgColor="gray_1">
+              <Button onPress={() => navigation.navigate("ad_form")} bgColor="gray_1">
                 <Feather name="plus" size={24} color={theme.colors.white} />
                 <Text size={16} color="white" fontFamily="karlaBold">
                   Criar anúncio
@@ -125,7 +125,7 @@ export function Home() {
                 </Text>
               </S.ActivityProductsInfo>
 
-              <S.TextButton onPress={() => {}}>
+              <S.TextButton onPress={() => navigation.navigate("ad_tab")}>
                 <Text color="blue" fontFamily="karlaBold">
                   Meus anúncios
                 </Text>
@@ -161,7 +161,9 @@ export function Home() {
               data={adsMock}
               keyExtractor={item => String(item.id)}
               numColumns={2}
-              renderItem={({ item }) => <AdsItem data={item} onPress={() => {}} />}
+              renderItem={({ item }) => (
+                <AdsItem data={item} onPress={() => navigation.navigate("detail")} />
+              )}
               columnWrapperStyle={{ justifyContent: "space-between" }}
               bounces={false}
             />

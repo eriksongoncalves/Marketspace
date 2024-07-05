@@ -17,9 +17,9 @@ export function AdsItem({ data, onPress }: AdsItemProps) {
         <Avatar size="small" borderColor="white" uri={data.userImageUrl} />
 
         <S.TagWrapper>
-          <Tag size="small">
+          <Tag size="small" bgColor={data.isNew ? "blue" : "gray_2"}>
             <Text color="white" trasnform="uppercase" size={10}>
-              Novo
+              {data.isNew ? "NOVO" : "USADO"}
             </Text>
           </Tag>
         </S.TagWrapper>
@@ -28,12 +28,15 @@ export function AdsItem({ data, onPress }: AdsItemProps) {
 
       <S.Info>
         <Text color="gray_2">{data.title}</Text>
-        <Text color="gray_1" fontFamily="karlaBold" size={16}>
-          <Text color="gray_1" fontFamily="karlaBold" size={12}>
-            R$
+
+        <S.Price>
+          <Text color="gray_1" fontFamily="karlaBold" size={16}>
+            <Text color="gray_1" fontFamily="karlaBold" size={12}>
+              R$
+            </Text>
+            {` ${formatPrice(data.price)}`}
           </Text>
-          {` ${formatPrice(data.price)}`}
-        </Text>
+        </S.Price>
       </S.Info>
     </S.Container>
   );

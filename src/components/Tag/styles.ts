@@ -11,15 +11,12 @@ type ContainerProps = {
 const containerModifiers = {
   large: () => css`
     padding: 6px 12px;
-    /* max-width: 100px; */
   `,
   medium: () => css`
     padding: 8px 2px;
-    max-width: 50px;
   `,
   small: () => css`
     padding: 2px 8px;
-    max-width: 43px;
   `
 };
 
