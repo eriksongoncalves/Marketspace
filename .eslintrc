@@ -29,6 +29,13 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+		"prettier/prettier": [
+      "error",
+      {
+        "printWidth": 100,
+        "singleQuote": true
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",

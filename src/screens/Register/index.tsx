@@ -2,15 +2,18 @@ import { SafeAreaView } from 'react-native';
 
 import LogoIcon from '@assets/logo-icon.svg';
 import { Avatar, Button, InputText, Text } from '@components/index';
+import { useNavigation } from '@react-navigation/native';
 import * as S from './styles';
 
 export function Register() {
+  const navigation = useNavigation();
+
   function handleRegister() {
-    console.log('>>> handleSign');
+    navigation.navigate('app');
   }
 
   function navigateToLogin() {
-    console.log('>>> handleNewAccount');
+    navigation.navigate('signin');
   }
 
   function handleChangePhoto() {

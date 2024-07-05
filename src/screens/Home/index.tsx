@@ -1,32 +1,19 @@
 import { AntDesign, Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import {
-  BottomSheetModal,
-  BottomSheetModalProvider,
-  BottomSheetScrollView
+	BottomSheetModal,
+	BottomSheetModalProvider,
+	BottomSheetScrollView
 } from '@gorhom/bottom-sheet';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FlatList, LogBox, Switch, TouchableOpacity } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
-import {
-  AdsItem,
-  Avatar,
-  Button,
-  Checkbox,
-  InputText,
-  Tag,
-  Text
-} from '@components/index';
+import { AdsItem, Avatar, Button, Checkbox, InputText, Tag, Text } from '@components/index';
+import { useNavigation } from '@react-navigation/native';
 import { adsMock } from '../../mocks/ads';
 import * as S from './styles';
 
-const PAYMENT_METHODS = [
-  'Boleto',
-  'Pix',
-  'Dinheiro',
-  'Cartão de crédito',
-  'Depósito bancário'
-];
+const PAYMENT_METHODS = ['Boleto', 'Pix', 'Dinheiro', 'Cartão de crédito', 'Depósito bancário'];
 
 enum Condition {
   NEW = 'NEW',
@@ -35,10 +22,10 @@ enum Condition {
 
 export function Home() {
   const theme = useTheme();
+  const navigation = useNavigation();
+
   const [isEnabled, setIsEnabled] = useState(false);
-  const [paymentMethodsSelected, setPaymentMethodsSelected] = useState<
-    string[]
-  >([]);
+  const [paymentMethodsSelected, setPaymentMethodsSelected] = useState<string[]>([]);
   const [condition, setCondition] = useState<Condition | undefined>();
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -53,10 +40,7 @@ export function Home() {
     console.log('handleSheetChanges', index);
   }, []);
 
-  const toggleSwitch = useCallback(
-    () => setIsEnabled(previousState => !previousState),
-    []
-  );
+  const toggleSwitch = useCallback(() => setIsEnabled(previousState => !previousState), []);
 
   const changeCondition = (value: Condition) => {
     const newValue = value === condition ? undefined : value;
@@ -104,10 +88,7 @@ export function Home() {
         <S.SafeAreaView>
           <S.Header>
             <S.WellcomeWrapper>
-              <Avatar
-                size="medium"
-                uri="https://randomuser.me/api/portraits/women/56.jpg"
-              />
+              <Avatar size="medium" uri="https://randomuser.me/api/portraits/women/56.jpg" />
 
               <S.WellcomeTexts>
                 <Text color="gray_1" size={16}>
@@ -120,7 +101,7 @@ export function Home() {
             </S.WellcomeWrapper>
 
             <S.ButtonWrapper>
-              <Button onPress={() => {}} bgColor="gray_1">
+              <Button onPress={() => navigation.navigate('detail')} bgColor="gray_1">
                 <Feather name="plus" size={24} color={theme.colors.white} />
                 <Text size={16} color="white" fontFamily="karlaBold">
                   Criar anúncio
@@ -133,11 +114,7 @@ export function Home() {
             <Text color="gray_3">Seus produtos anunciados para venda</Text>
 
             <S.MyProductsInfoBox>
-              <MaterialCommunityIcons
-                name="tag-outline"
-                size={24}
-                color="black"
-              />
+              <MaterialCommunityIcons name="tag-outline" size={24} color="black" />
 
               <S.ActivityProductsInfo>
                 <Text color="gray_2" size={20} fontFamily="karlaBold">
@@ -152,11 +129,7 @@ export function Home() {
                 <Text color="blue" fontFamily="karlaBold">
                   Meus anúncios
                 </Text>
-                <AntDesign
-                  name="arrowright"
-                  size={24}
-                  color={theme.colors.blue}
-                />
+                <AntDesign name="arrowright" size={24} color={theme.colors.blue} />
               </S.TextButton>
             </S.MyProductsInfoBox>
 
@@ -165,11 +138,7 @@ export function Home() {
 
               <S.InputWrapper>
                 <S.Input>
-                  <InputText
-                    placeholder="Buscar anúncio"
-                    noBorders
-                    onSubmitEditing={() => {}}
-                  />
+                  <InputText placeholder="Buscar anúncio" noBorders onSubmitEditing={() => {}} />
                 </S.Input>
 
                 <S.IconsWrapper>
@@ -192,9 +161,7 @@ export function Home() {
               data={adsMock}
               keyExtractor={item => String(item.id)}
               numColumns={2}
-              renderItem={({ item }) => (
-                <AdsItem data={item} onPress={() => {}} />
-              )}
+              renderItem={({ item }) => <AdsItem data={item} onPress={() => {}} />}
               columnWrapperStyle={{ justifyContent: 'space-between' }}
               bounces={false}
             />
@@ -223,14 +190,8 @@ export function Home() {
                     Filtrar anúncios
                   </Text>
 
-                  <TouchableOpacity
-                    onPress={() => bottomSheetModalRef.current?.dismiss()}
-                  >
-                    <AntDesign
-                      name="close"
-                      size={24}
-                      color={theme.colors.gray_4}
-                    />
+                  <TouchableOpacity onPress={() => bottomSheetModalRef.current?.dismiss()}>
+                    <AntDesign name="close" size={24} color={theme.colors.gray_4} />
                   </TouchableOpacity>
                 </S.BottomSheetHeader>
 
@@ -255,9 +216,7 @@ export function Home() {
                       false: theme.colors.gray_5,
                       true: theme.colors.blue_light
                     }}
-                    thumbColor={
-                      isEnabled ? theme.colors.gray_7 : theme.colors.gray_7
-                    }
+                    thumbColor={isEnabled ? theme.colors.gray_7 : theme.colors.gray_7}
                     ios_backgroundColor={theme.colors.gray_5}
                     onValueChange={toggleSwitch}
                     value={isEnabled}

@@ -11,7 +11,7 @@ import { useCallback } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
 
-import { Home } from '@screens/Home';
+import { Routes } from '@routes/index';
 import { theme } from '@theme/index';
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
     <GestureHandlerRootView onLayout={onLayoutRootView} style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
         <StatusBar translucent backgroundColor="transparent" />
-        <Home />
+        <Routes />
       </ThemeProvider>
     </GestureHandlerRootView>
   );

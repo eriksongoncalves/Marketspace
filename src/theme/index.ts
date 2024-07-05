@@ -35,7 +35,8 @@ const theme = {
     gray_7: '#F7F7F8',
     blue: '#364D9D',
     blue_light: '#647AC7',
-    white: '#FFFFFF'
+    white: '#FFFFFF',
+    red_1: '#EE7979'
   }
 } as const;
 
