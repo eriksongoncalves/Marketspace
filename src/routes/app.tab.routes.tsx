@@ -25,6 +25,7 @@ function AppTabRoutes() {
 
   return (
     <Navigator
+      backBehavior="none"
       screenOptions={{
         tabBarActiveTintColor: theme.colors.gray_2,
         tabBarInactiveTintColor: theme.colors.gray_4,

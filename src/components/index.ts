@@ -1,6 +1,7 @@
 export * from "./AdsItem";
 export * from "./Avatar";
 export * from "./Button";
+export * from "./Carrousel";
 export * from "./Checkbox";
 export * from "./InputText";
 export * from "./Tag";

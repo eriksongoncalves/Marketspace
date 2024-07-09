@@ -1,13 +1,16 @@
 import { SafeAreaView } from "react-native";
 
-import { Text } from "@components/index";
+import { Carrousel } from "@components/Carrousel";
+import { adsMock } from "@mocks/ads";
 import * as S from "./styles";
+
+const carrouselImages = adsMock.map(item => item.images[0]);
 
 export function Detail() {
   return (
     <S.Container bounces={false}>
       <SafeAreaView>
-        <Text>DETALHES DO ANÚNCIO</Text>
+        <Carrousel images={carrouselImages} />
       </SafeAreaView>
     </S.Container>
   );
