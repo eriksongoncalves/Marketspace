@@ -1,18 +1,14 @@
-import {
-  Karla_400Regular,
-  Karla_700Bold,
-  useFonts
-} from '@expo-google-fonts/karla';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
-import 'intl';
-import { useCallback } from 'react';
+import { Karla_400Regular, Karla_700Bold, useFonts } from "@expo-google-fonts/karla";
+import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
+import "intl";
+import { useCallback } from "react";
 
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { ThemeProvider } from 'styled-components';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { ThemeProvider } from "styled-components";
 
-import { Routes } from '@routes/index';
-import { theme } from '@theme/index';
+import { Routes } from "@routes/index";
+import { theme } from "@theme/index";
 
 export default function App() {
   const [fontsLoaded] = useFonts({

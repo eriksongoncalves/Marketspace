@@ -31,7 +31,7 @@ export function HomeStackRoutes() {
           title: "",
           headerLeft: () => (
             <TouchableWithoutFeedback onPress={navigation.goBack}>
-              <AntDesign name="arrowleft" size={24} color="black" />
+              <AntDesign name="arrowleft" size={24} color={theme.colors.gray_1} />
             </TouchableWithoutFeedback>
           )
         })}

@@ -4,5 +4,6 @@ export * from "./Button";
 export * from "./Carrousel";
 export * from "./Checkbox";
 export * from "./InputText";
+export * from "./Price";
 export * from "./Tag";
 export * from "./Text";

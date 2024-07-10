@@ -1,8 +1,9 @@
 import { Avatar } from "@components/Avatar";
+import { Price } from "@components/Price";
 import { Tag } from "@components/Tag";
 import { Text } from "@components/Text";
+
 import { Ad } from "@shared/types/ads";
-import { formatPrice } from "@shared/utils/format-price";
 import * as S from "./styles";
 
 type AdsItemProps = {
@@ -29,14 +30,7 @@ export function AdsItem({ data, onPress }: AdsItemProps) {
       <S.Info>
         <Text color="gray_2">{data.title}</Text>
 
-        <S.Price>
-          <Text color="gray_1" fontFamily="karlaBold" size={16}>
-            <Text color="gray_1" fontFamily="karlaBold" size={12}>
-              R$
-            </Text>
-            {` ${formatPrice(data.price)}`}
-          </Text>
-        </S.Price>
+        <Price price={120} />
       </S.Info>
     </S.Container>
   );

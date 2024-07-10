@@ -33,8 +33,5 @@ export const TagWrapper = styled.View`
 export const Info = styled.View`
   width: 100%;
   padding-top: 4px;
-`;
-
-export const Price = styled.View`
-  margin-top: 5px;
+  gap: 5px;
 `;

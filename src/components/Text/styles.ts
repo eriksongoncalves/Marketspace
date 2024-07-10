@@ -7,7 +7,7 @@ type WrapperProps = {
   size: ThemeFontSizes;
   fontFamily: ThemeFontFamilies;
   color: ThemeColors;
-  align: "center" | "left" | "right";
+  align: "center" | "left" | "right" | "justify";
   trasnform?: "none" | "uppercase" | "lowercase";
 };
 
