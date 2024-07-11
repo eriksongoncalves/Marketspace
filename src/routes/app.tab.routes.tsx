@@ -1,11 +1,14 @@
+import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+import { Text } from "@components/index";
 import { useNavigation } from "@react-navigation/native";
+import { MyAds } from "@screens/MyAds";
 import * as React from "react";
-import { Platform, Text, View } from "react-native";
+import { Platform, TouchableWithoutFeedback, View } from "react-native";
 import { useTheme } from "styled-components";
 import { HomeStackRoutes } from "./home.stack.routes";
 
@@ -48,8 +51,26 @@ function AppTabRoutes() {
 
       <Screen
         name="ad_tab"
-        component={FakeTabContent}
+        component={MyAds}
         options={{
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: theme.colors.gray_6
+          },
+          headerShadowVisible: false,
+          headerRightContainerStyle: {
+            marginRight: 24
+          },
+          headerTitle: () => (
+            <Text color="gray_1" fontFamily="karlaBold" size={20}>
+              Meus anúncios
+            </Text>
+          ),
+          headerRight: () => (
+            <TouchableWithoutFeedback onPress={() => navigation.navigate("ad_form")}>
+              <AntDesign name="plus" size={22} color={theme.colors.gray_1} />
+            </TouchableWithoutFeedback>
+          ),
           tabBarIcon: ({ color }) => <FontAwesome5 name="tag" size={20} color={color} />
         }}
       />
