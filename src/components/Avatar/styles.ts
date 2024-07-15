@@ -53,7 +53,7 @@ const imageModifiers = {
 
 export const Container = styled.View<ContainerProps>`
   ${({ theme, size, borderColor }) => css`
-    background-color: ${theme.colors.gray_5};
+    background-color: transparent;
     border-color: ${theme.colors[borderColor]};
     justify-content: center;
     align-items: center;

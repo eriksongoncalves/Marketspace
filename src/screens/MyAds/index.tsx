@@ -58,7 +58,10 @@ export function MyAds() {
         keyExtractor={item => String(item.id)}
         numColumns={2}
         renderItem={({ item }) => (
-          <AdsItem data={item} onPress={() => navigation.navigate("ad_form")} />
+          <AdsItem
+            data={item}
+            onPress={() => navigation.navigate("ad_form", { id: String(item.id) })}
+          />
         )}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         bounces={false}

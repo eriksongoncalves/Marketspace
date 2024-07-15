@@ -27,7 +27,9 @@ export function Detail() {
     if (isMyAd && !isPreview) {
       navigation.setOptions({
         headerRight: () => (
-          <TouchableWithoutFeedback onPress={() => navigation.navigate("ad_form")}>
+          <TouchableWithoutFeedback
+            onPress={() => navigation.navigate("ad_form", { id: String(123) })}
+          >
             <AntDesign name="edit" size={22} color={theme.colors.gray_1} />
           </TouchableWithoutFeedback>
         )
@@ -40,9 +42,8 @@ export function Detail() {
       });
     }
 
-    navigation.getParent()?.setOptions({ tabBarStyle: { display: "none" }, tabBarVisible: false });
-    return () =>
-      navigation.getParent()?.setOptions({ tabBarStyle: undefined, tabBarVisible: undefined });
+    navigation?.setOptions({ tabBarStyle: { display: "none" }, tabBarVisible: false });
+    return () => navigation.setOptions({ tabBarStyle: undefined, tabBarVisible: undefined });
   }, [isMyAd, isPreview, navigation, theme]);
 
   return (
