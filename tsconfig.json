@@ -3,9 +3,11 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["./src/*"],
+      "@components": ["./src/components/index"],
       "@components/*": ["./src/components/*"],
       "@screens/*": ["./src/screens/*"],
       "@assets/*": ["./src/assets/*"],
+      "@theme": ["./src/theme/index"],
       "@theme/*": ["./src/theme/*"],
       "@shared/*": ["./src/shared/*"],
       "@hooks/*": ["./src/hooks/*"],
@@ -28,13 +30,7 @@
     "experimentalDecorators": true
   },
   "typeRoots": ["./src/@types"],
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "ios",
-    "android"
-  ],
-  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "ios", "android"],
+  "include": ["./src/**/*"],
   "extends": "expo/tsconfig.base"
 }

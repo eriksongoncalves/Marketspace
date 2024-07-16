@@ -1,6 +1,7 @@
 import { TextProps as TextPropsBase } from "react-native";
 
 import { ThemeColors, ThemeFontFamilies, ThemeFontSizes } from "@shared/types/theme";
+import { Spacing } from "@theme/index";
 import * as S from "./styles";
 
 type TextProps = {
@@ -9,6 +10,8 @@ type TextProps = {
   color?: ThemeColors;
   align?: "center" | "left" | "right" | "justify";
   trasnform?: "none" | "uppercase" | "lowercase";
+  mt?: Spacing;
+  mb?: Spacing;
 } & TextPropsBase;
 
 export function Text({

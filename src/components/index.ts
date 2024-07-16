@@ -4,6 +4,8 @@ export * from "./Button";
 export * from "./Carrousel";
 export * from "./Checkbox";
 export * from "./InputText";
+export * from "./PhotoThumb";
 export * from "./Price";
+export * from "./Radio";
 export * from "./Tag";
 export * from "./Text";

@@ -4,21 +4,16 @@ import {
   BottomSheetModalProvider,
   BottomSheetScrollView
 } from "@gorhom/bottom-sheet";
+import { useNavigation } from "@react-navigation/native";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { FlatList, LogBox, Switch, TouchableOpacity } from "react-native";
 import { useTheme } from "styled-components/native";
 
 import { AdsItem, Avatar, Button, Checkbox, InputText, Tag, Text } from "@components/index";
-import { useNavigation } from "@react-navigation/native";
+import { Condition } from "@shared/types/enums";
+import { PAYMENT_METHODS } from "@shared/utils/constants";
 import { adsMock } from "../../mocks/ads";
 import * as S from "./styles";
-
-const PAYMENT_METHODS = ["Boleto", "Pix", "Dinheiro", "Cartão de crédito", "Depósito bancário"];
-
-enum Condition {
-  NEW = "NEW",
-  USED = "USED"
-}
 
 export function Home() {
   const theme = useTheme();

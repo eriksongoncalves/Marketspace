@@ -35,6 +35,7 @@ export function InputText({ noBorders = false, ...rest }: InputTextProps) {
         onFocus={toggleActive}
         onBlur={toggleActive}
         secureTextEntry={!showInputContent}
+        placeholderTextColor={theme.colors.gray_4}
       />
 
       {!!rest.secureTextEntry && (

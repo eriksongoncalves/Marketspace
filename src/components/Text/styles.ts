@@ -1,7 +1,7 @@
-import styled, { DefaultTheme, css } from "styled-components/native";
+import styled, { css, DefaultTheme } from "styled-components/native";
 
 import { ThemeColors, ThemeFontFamilies, ThemeFontSizes } from "@shared/types/theme";
-import { mapFontFamilies } from "@theme/index";
+import { mapFontFamilies, Spacing } from "@theme/index";
 
 type WrapperProps = {
   size: ThemeFontSizes;
@@ -9,6 +9,8 @@ type WrapperProps = {
   color: ThemeColors;
   align: "center" | "left" | "right" | "justify";
   trasnform?: "none" | "uppercase" | "lowercase";
+  mt?: Spacing;
+  mb?: Spacing;
 };
 
 const modifiers = {
@@ -17,12 +19,14 @@ const modifiers = {
 };
 
 export const Wrapper = styled.Text<WrapperProps>`
-  ${({ theme, size, fontFamily, color, align, trasnform }) => css`
+  ${({ theme, size, fontFamily, color, align, trasnform, mt, mb }) => css`
     font-size: ${theme.fonts.size[size]};
     font-family: ${modifiers.fontFamily(fontFamily)};
     color: ${theme.colors[color]};
     line-height: ${modifiers.lineHeight(size, theme)};
     text-align: ${align};
     text-transform: ${trasnform};
+    margin-top: ${mt ? `${mt}px` : "auto"};
+    margin-bottom: ${mb ? `${mb}px` : "auto"};
   `}
 `;
