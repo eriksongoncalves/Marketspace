@@ -27,7 +27,14 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
+          <string>marketspace</string>
           <string>com.teste.marketspace</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>exp+marketspace</string>
         </array>
       </dict>
     </array>
